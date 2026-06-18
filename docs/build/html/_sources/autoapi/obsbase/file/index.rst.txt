@@ -1,0 +1,76 @@
+obsbase.file
+============
+
+.. py:module:: obsbase.file
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   obsbase.file.FileInfo
+
+
+Module Contents
+---------------
+
+.. py:class:: FileInfo(path: pathlib.Path, vault_path: pathlib.Path)
+
+   Informations sur un fichier Markdown du vault.
+
+
+   .. py:attribute:: _path
+
+
+   .. py:attribute:: _vault
+
+
+   .. py:property:: name
+
+      Nom sans extension.
+
+
+
+   .. py:property:: ext
+
+      Extension sans le point.
+
+
+
+   .. py:property:: filename
+
+      Nom complet.
+
+
+
+   .. py:property:: path
+
+      Chemin relatif au vault.
+
+
+
+   .. py:property:: folder
+
+      Dossier relatif au vault.
+
+
+
+   .. py:property:: size
+
+      Taille du fichier en octets.
+
+
+
+   .. py:property:: created
+
+      Date de création (ou équivalent selon le système).
+
+
+
+   .. py:property:: modified
+
+      Dernière modification.
+
+
+

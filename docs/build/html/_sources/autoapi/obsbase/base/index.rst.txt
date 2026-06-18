@@ -1,0 +1,49 @@
+obsbase.base
+============
+
+.. py:module:: obsbase.base
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   obsbase.base.Base
+
+
+Module Contents
+---------------
+
+.. py:class:: Base(vault, path)
+
+   Represents an Obsidian Base definition.
+
+   A Base contains one or more views that can be executed against a vault.
+
+
+   .. py:attribute:: vault
+
+
+   .. py:attribute:: path
+
+
+   .. py:attribute:: views
+
+
+   .. py:method:: run(index=0)
+
+      Execute a view.
+
+      Parameters
+      ----------
+      index : int, default=0
+          Index of the view to execute.
+
+      Returns
+      -------
+      ResultSet
+          Matching notes.
+
+
+

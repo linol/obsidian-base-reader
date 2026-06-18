@@ -1,0 +1,178 @@
+# obsbase
+
+Read and query Obsidian Bases from Python.
+
+`obsbase` loads Obsidian `.base` files and returns the results as Python
+objects or pandas DataFrames.
+
+## Installation
+
+```bash
+pip install obsbase
+```
+
+## Quick start
+
+```
+from obsbase import Vaultvault = Vault("/path/to/your/vault")df = (    vault    .base("books.base")    .run()    .to_dataframe())print(df.head())
+```
+
+
+## Description
+
+```text
+Vault
+   │
+   ├── notes()
+   │
+   └── base("books.base")
+            │
+            ▼
+          Base
+            │
+            ▼
+          View
+            │
+            ▼
+        ResultSet
+            │
+            ▼
+       pandas.DataFrame
+```
+
+## Example
+
+example vault with french cities: 
+
+set md files from wikipedia : https://fr.wikipedia.org/wiki/Liste_des_communes_de_France_les_plus_peupl%C3%A9es
+
+```
+villes/    Paris.md    Lyon.md    Marseille.md
+```
+
+`top50.base`
+
+```
+views:
+  - type: table
+    name: Tableau
+    filters:
+      and:
+        - file.folder == "villes"
+        - Rang_2023 <= 50
+    order:
+      - file.name
+      - Commune
+      - Population_de_référence
+      - Département
+      - Région
+      - Rang_2023
+    sort:
+      - property: Rang_2023
+        direction: ASC
+```
+
+Then:
+
+```
+from obsbase import Vault
+
+vault = Vault("examples/obsbase_vault")
+
+base = vault.base("top50.base")
+
+rows = base.run()
+
+df = rows.to_dataframe()
+```
+
+returns
+
+|     | file.name       | Commune         | Population_de_référence | Département         | Région                     | Rang_2023 |
+| --- | --------------- | --------------- | ----------------------- | ------------------- | -------------------------- | --------- |
+| 0   | Reims           | Reims           | 177 674                 | Marne               | Grand Est                  | 13        |
+| 1   | Amiens          | Amiens          | 136 449                 | Somme               | Hauts-de-France            | 28        |
+| 2   | Avignon         | Avignon         | 92 188                  | Vaucluse            | Provence-Alpes-Côte d'Azur | 49        |
+| 3   | Tourcoing       | Tourcoing       | 98 772                  | Nord                | Hauts-de-France            | 43        |
+| 4   | Roubaix         | Roubaix         | 98 286                  | Nord                | Hauts-de-France            | 44        |
+| 5   | Villeurbanne    | Villeurbanne    | 163 684                 | Métropole de Lyon   | Auvergne-Rhône-Alpe        | 16        |
+| ... | ...             | ...             | ...                     | ...                 | ...                        | ...       |
+| 45  | Paris           | Paris           | 2 103 778               | Paris               | Île-de-France              | 1         |
+| 46  | Perpignan       | Perpignan       | 121 616                 | Pyrénées-Orientales | Occitanie                  | 32        |
+| 47  | Strasbourg      | Strasbourg      | 293 771                 | Bas-Rhin            | Grand Est                  | 8         |
+| 48  | Aix-en-Provence | Aix-en-Provence | 149 695                 | Bouches-du-Rhône    | Provence-Alpes-Côte d'Azur | 22        |
+| 49  | Toulouse        | Toulouse        | 514 819                 | Haute-Garonne       | Occitanie                  | 4         |
+
+
+## API
+
+### Vault
+
+```
+vault = Vault(path)
+```
+
+Methods
+
+- `notes()`
+- `base(filename)`
+
+### Base
+
+```
+base = vault.base("top50.base")
+```
+
+Methods
+
+- `run()`
+
+Attributes
+
+- `views`
+
+### View
+
+```
+view = base.views[0]
+```
+
+Methods
+
+- `run()`
+
+Attributes
+
+- `name`
+- `type`
+- `filters`
+- `columns`
+- `sort`
+
+### ResultSet
+
+```
+rows = base.run()
+```
+
+Methods
+
+- `to_dataframe()`
+
+Supports
+
+- iteration
+- indexing
+- `len()`
+
+## Roadmap
+
+- [x]  Read notes
+- [x]  Read `.base` files
+- [x]  Execute filters
+- [x]  Export to pandas
+- [ ]  Sorting
+- [ ]  Nested filters (`or`)
+- [ ]  Dataview expressions
+- [ ]  CSV export
+- [ ]  Markdown export

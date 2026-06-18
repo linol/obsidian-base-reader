@@ -1,0 +1,55 @@
+obsbase.note
+============
+
+.. py:module:: obsbase.note
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   obsbase.note.Note
+
+
+Module Contents
+---------------
+
+.. py:class:: Note(path, vault)
+
+   .. py:attribute:: path
+
+
+   .. py:attribute:: vault
+
+
+   .. py:attribute:: _metadata
+
+
+   .. py:attribute:: _content
+
+
+   .. py:attribute:: file
+
+
+   .. py:property:: name
+
+
+   .. py:property:: folder
+
+      Nom du dossier contenant la note.
+
+
+
+   .. py:property:: frontmatter
+
+
+   .. py:property:: content
+
+
+   .. py:method:: __getitem__(key)
+
+
+   .. py:method:: get(field)
+
+

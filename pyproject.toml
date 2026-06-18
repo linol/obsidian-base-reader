@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "obsbase"
+version = "0.1.0"
+description = "Read and query Obsidian Base (.base) files from Python"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+authors = [
+    { name = "Ton Nom" }
+]
+
+dependencies = [
+    "PyYAML",
+    "python-frontmatter",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[project.optional-dependencies]
+docs = [
+    "sphinx>=8",
+    "furo",
+    "myst-parser",
+    "sphinx-autoapi",
+]

@@ -1,0 +1,17 @@
+views:
+  - type: table
+    name: Tableau
+    filters:
+      and:
+        - file.folder == "villes"
+        - Rang_2023 <= 50
+    order:
+      - file.name
+      - Commune
+      - Population_de_référence
+      - Département
+      - Région
+      - Rang_2023
+    sort:
+      - property: Rang_2023
+        direction: ASC

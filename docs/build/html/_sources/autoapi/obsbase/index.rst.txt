@@ -1,0 +1,146 @@
+obsbase
+=======
+
+.. py:module:: obsbase
+
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/obsbase/base/index
+   /autoapi/obsbase/file/index
+   /autoapi/obsbase/note/index
+   /autoapi/obsbase/query/index
+   /autoapi/obsbase/resultset/index
+   /autoapi/obsbase/vault/index
+   /autoapi/obsbase/view/index
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   obsbase.Vault
+   obsbase.Base
+   obsbase.Note
+
+
+Package Contents
+----------------
+
+.. py:class:: Vault(path)
+
+   Represents an Obsidian vault.
+
+   A vault provides access to Markdown notes and Obsidian Base files.
+
+   Parameters
+   ----------
+   path : str | Path
+       Path to the root directory of the vault.
+
+
+   .. py:attribute:: path
+
+
+   .. py:method:: notes() -> collections.abc.Iterator[obsbase.note.Note]
+
+      Iterate over all Markdown notes in the vault.
+
+      Yields
+      ------
+      Note
+          Each Markdown note found recursively in the vault.
+
+
+
+   .. py:method:: base(filename)
+
+      Load a Base definition.
+
+      Parameters
+      ----------
+      filename : str
+          Relative path to the `.base` file.
+
+      Returns
+      -------
+      Base
+          The loaded Base object.
+
+
+
+.. py:class:: Base(vault, path)
+
+   Represents an Obsidian Base definition.
+
+   A Base contains one or more views that can be executed against a vault.
+
+
+   .. py:attribute:: vault
+
+
+   .. py:attribute:: path
+
+
+   .. py:attribute:: views
+
+
+   .. py:method:: run(index=0)
+
+      Execute a view.
+
+      Parameters
+      ----------
+      index : int, default=0
+          Index of the view to execute.
+
+      Returns
+      -------
+      ResultSet
+          Matching notes.
+
+
+
+.. py:class:: Note(path, vault)
+
+   .. py:attribute:: path
+
+
+   .. py:attribute:: vault
+
+
+   .. py:attribute:: _metadata
+
+
+   .. py:attribute:: _content
+
+
+   .. py:attribute:: file
+
+
+   .. py:property:: name
+
+
+   .. py:property:: folder
+
+      Nom du dossier contenant la note.
+
+
+
+   .. py:property:: frontmatter
+
+
+   .. py:property:: content
+
+
+   .. py:method:: __getitem__(key)
+
+
+   .. py:method:: get(field)
+
+

@@ -1,0 +1,46 @@
+obsbase.view
+============
+
+.. py:module:: obsbase.view
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   obsbase.view.View
+
+
+Module Contents
+---------------
+
+.. py:class:: View(base, data)
+
+   A view defined inside a Base.
+
+
+   .. py:attribute:: base
+
+
+   .. py:attribute:: vault
+
+
+   .. py:attribute:: type
+
+
+   .. py:attribute:: name
+
+
+   .. py:attribute:: filters
+
+
+   .. py:attribute:: columns
+
+
+   .. py:attribute:: sort
+
+
+   .. py:method:: run()
+
+

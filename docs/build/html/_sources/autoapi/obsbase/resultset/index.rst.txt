@@ -1,0 +1,43 @@
+obsbase.resultset
+=================
+
+.. py:module:: obsbase.resultset
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   obsbase.resultset.ResultSet
+
+
+Module Contents
+---------------
+
+.. py:class:: ResultSet(view, rows)
+
+   Collection of notes returned by a view.
+
+   ResultSet behaves like a sequence of Note objects and provides
+   convenience methods for exporting the results.
+
+
+   .. py:attribute:: view
+
+
+   .. py:attribute:: rows
+
+
+   .. py:method:: __iter__() -> collections.abc.Iterator
+
+
+   .. py:method:: __len__()
+
+
+   .. py:method:: __getitem__(index)
+
+
+   .. py:method:: to_dataframe()
+
+

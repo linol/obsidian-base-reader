@@ -1,0 +1,59 @@
+obsbase.vault
+=============
+
+.. py:module:: obsbase.vault
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   obsbase.vault.Vault
+
+
+Module Contents
+---------------
+
+.. py:class:: Vault(path)
+
+   Represents an Obsidian vault.
+
+   A vault provides access to Markdown notes and Obsidian Base files.
+
+   Parameters
+   ----------
+   path : str | Path
+       Path to the root directory of the vault.
+
+
+   .. py:attribute:: path
+
+
+   .. py:method:: notes() -> collections.abc.Iterator[obsbase.note.Note]
+
+      Iterate over all Markdown notes in the vault.
+
+      Yields
+      ------
+      Note
+          Each Markdown note found recursively in the vault.
+
+
+
+   .. py:method:: base(filename)
+
+      Load a Base definition.
+
+      Parameters
+      ----------
+      filename : str
+          Relative path to the `.base` file.
+
+      Returns
+      -------
+      Base
+          The loaded Base object.
+
+
+

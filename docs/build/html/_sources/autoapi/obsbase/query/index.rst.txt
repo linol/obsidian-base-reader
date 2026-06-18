@@ -1,0 +1,19 @@
+obsbase.query
+=============
+
+.. py:module:: obsbase.query
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   obsbase.query.build_filter
+
+
+Module Contents
+---------------
+
+.. py:function:: build_filter(view)
+
