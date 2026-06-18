@@ -3,10 +3,10 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../../../genindex.html"><link rel="search" title="Search" href="../../../search.html"><link rel="next" title="obsbase.view" href="../view/index.html"><link rel="prev" title="obsbase.resultset" href="../resultset/index.html">
+<link rel="index" title="Index" href="../../../genindex.html"><link rel="search" title="Search" href="../../../search.html"><link rel="next" title="obsbase.note" href="../note/index.html"><link rel="prev" title="obsbase.file" href="../file/index.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.12.19 -->
-        <title>obsbase.vault - obsbase 0.1.0 documentation</title>
+        <title>obsbase.filters - obsbase 0.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
@@ -200,11 +200,11 @@
 <li class="toctree-l2 current has-children"><a class="reference internal" href="../index.html">obsbase</a><input aria-label="Toggle navigation of obsbase" checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../base/index.html">obsbase.base</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../file/index.html">obsbase.file</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../filters/index.html">obsbase.filters</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">obsbase.filters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../note/index.html">obsbase.note</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../query/index.html">obsbase.query</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../resultset/index.html">obsbase.resultset</a></li>
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">obsbase.vault</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../vault/index.html">obsbase.vault</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../view/index.html">obsbase.view</a></li>
 </ul>
 </li>
@@ -230,7 +230,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../../../_sources/autoapi/obsbase/vault/index.rst.txt" title="View this page">
+  <a class="muted-link" href="../../../_sources/autoapi/obsbase/filters/index.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -248,15 +248,42 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="module-obsbase.vault">
-<span id="obsbase-vault"></span><h1>obsbase.vault<a class="headerlink" href="#module-obsbase.vault" title="Link to this heading">¶</a></h1>
+          <section id="module-obsbase.filters">
+<span id="obsbase-filters"></span><h1>obsbase.filters<a class="headerlink" href="#module-obsbase.filters" title="Link to this heading">¶</a></h1>
+<section id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">¶</a></h2>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#obsbase.filters.OPERATORS" title="obsbase.filters.OPERATORS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OPERATORS</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#obsbase.filters.STRING_METHODS" title="obsbase.filters.STRING_METHODS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">STRING_METHODS</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#obsbase.vault.Vault" title="obsbase.vault.Vault"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vault</span></code></a></p></td>
-<td><p>Represents an Obsidian vault.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#obsbase.filters.FilterExpression" title="obsbase.filters.FilterExpression"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FilterExpression</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#obsbase.filters.parse_literal" title="obsbase.filters.parse_literal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_literal</span></code></a>(value)</p></td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table>
@@ -264,56 +291,44 @@
 </section>
 <section id="module-contents">
 <h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="obsbase.filters.OPERATORS">
+<span class="sig-prename descclassname"><span class="pre">obsbase.filters.</span></span><span class="sig-name descname"><span class="pre">OPERATORS</span></span><a class="headerlink" href="#obsbase.filters.OPERATORS" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="obsbase.filters.STRING_METHODS">
+<span class="sig-prename descclassname"><span class="pre">obsbase.filters.</span></span><span class="sig-name descname"><span class="pre">STRING_METHODS</span></span><a class="headerlink" href="#obsbase.filters.STRING_METHODS" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="obsbase.filters.parse_literal">
+<span class="sig-prename descclassname"><span class="pre">obsbase.filters.</span></span><span class="sig-name descname"><span class="pre">parse_literal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#obsbase.filters.parse_literal" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="py class">
-<dt class="sig sig-object py" id="obsbase.vault.Vault">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">obsbase.vault.</span></span><span class="sig-name descname"><span class="pre">Vault</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#obsbase.vault.Vault" title="Link to this definition">¶</a></dt>
-<dd><p>Represents an Obsidian vault.</p>
-<p>A vault provides access to Markdown notes and Obsidian Base files.</p>
-<section id="parameters">
-<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt>path<span class="classifier">str | Path</span></dt><dd><p>Path to the root directory of the vault.</p>
-</dd>
-</dl>
+<dt class="sig sig-object py" id="obsbase.filters.FilterExpression">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">obsbase.filters.</span></span><span class="sig-name descname"><span class="pre">FilterExpression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expression</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#obsbase.filters.FilterExpression" title="Link to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="obsbase.filters.FilterExpression.OP_RE">
+<span class="sig-name descname"><span class="pre">OP_RE</span></span><a class="headerlink" href="#obsbase.filters.FilterExpression.OP_RE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="py attribute">
-<dt class="sig sig-object py" id="obsbase.vault.Vault.path">
-<span class="sig-name descname"><span class="pre">path</span></span><a class="headerlink" href="#obsbase.vault.Vault.path" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="obsbase.filters.FilterExpression.METHOD_RE">
+<span class="sig-name descname"><span class="pre">METHOD_RE</span></span><a class="headerlink" href="#obsbase.filters.FilterExpression.METHOD_RE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="obsbase.filters.FilterExpression.expression">
+<span class="sig-name descname"><span class="pre">expression</span></span><a class="headerlink" href="#obsbase.filters.FilterExpression.expression" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="obsbase.vault.Vault.notes">
-<span class="sig-name descname"><span class="pre">notes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">collections.abc.Iterator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../note/index.html#obsbase.note.Note" title="obsbase.note.Note"><span class="pre">obsbase.note.Note</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#obsbase.vault.Vault.notes" title="Link to this definition">¶</a></dt>
-<dd><p>Iterate over all Markdown notes in the vault.</p>
-<section id="yields">
-<h4>Yields<a class="headerlink" href="#yields" title="Link to this heading">¶</a></h4>
-<dl class="simple">
-<dt>Note</dt><dd><p>Each Markdown note found recursively in the vault.</p>
-</dd>
-</dl>
-</section>
-</dd></dl>
+<dt class="sig sig-object py" id="obsbase.filters.FilterExpression.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">note</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#obsbase.filters.FilterExpression.evaluate" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="obsbase.vault.Vault.base">
-<span class="sig-name descname"><span class="pre">base</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#obsbase.vault.Vault.base" title="Link to this definition">¶</a></dt>
-<dd><p>Load a Base definition.</p>
-<section id="id1">
-<h4>Parameters<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h4>
-<dl class="simple">
-<dt>filename<span class="classifier">str</span></dt><dd><p>Relative path to the <cite>.base</cite> file.</p>
-</dd>
-</dl>
-</section>
-<section id="returns">
-<h4>Returns<a class="headerlink" href="#returns" title="Link to this heading">¶</a></h4>
-<dl class="simple">
-<dt>Base</dt><dd><p>The loaded Base object.</p>
-</dd>
-</dl>
-</section>
-</dd></dl>
-
-</section>
 </dd></dl>
 
 </section>
@@ -324,23 +339,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../view/index.html">
+          <a class="next-page" href="../note/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">obsbase.view</div>
+                <div class="title">obsbase.note</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../resultset/index.html">
+          <a class="prev-page" href="../file/index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">obsbase.resultset</div>
+                <div class="title">obsbase.file</div>
                 
               </div>
             </a>
@@ -374,13 +389,19 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">obsbase.vault</a><ul>
+<li><a class="reference internal" href="#">obsbase.filters</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
 <li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
 <li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
-<li><a class="reference internal" href="#obsbase.vault.Vault"><code class="docutils literal notranslate"><span class="pre">Vault</span></code></a><ul>
-<li><a class="reference internal" href="#obsbase.vault.Vault.path"><code class="docutils literal notranslate"><span class="pre">Vault.path</span></code></a></li>
-<li><a class="reference internal" href="#obsbase.vault.Vault.notes"><code class="docutils literal notranslate"><span class="pre">Vault.notes()</span></code></a></li>
-<li><a class="reference internal" href="#obsbase.vault.Vault.base"><code class="docutils literal notranslate"><span class="pre">Vault.base()</span></code></a></li>
+<li><a class="reference internal" href="#obsbase.filters.OPERATORS"><code class="docutils literal notranslate"><span class="pre">OPERATORS</span></code></a></li>
+<li><a class="reference internal" href="#obsbase.filters.STRING_METHODS"><code class="docutils literal notranslate"><span class="pre">STRING_METHODS</span></code></a></li>
+<li><a class="reference internal" href="#obsbase.filters.parse_literal"><code class="docutils literal notranslate"><span class="pre">parse_literal()</span></code></a></li>
+<li><a class="reference internal" href="#obsbase.filters.FilterExpression"><code class="docutils literal notranslate"><span class="pre">FilterExpression</span></code></a><ul>
+<li><a class="reference internal" href="#obsbase.filters.FilterExpression.OP_RE"><code class="docutils literal notranslate"><span class="pre">FilterExpression.OP_RE</span></code></a></li>
+<li><a class="reference internal" href="#obsbase.filters.FilterExpression.METHOD_RE"><code class="docutils literal notranslate"><span class="pre">FilterExpression.METHOD_RE</span></code></a></li>
+<li><a class="reference internal" href="#obsbase.filters.FilterExpression.expression"><code class="docutils literal notranslate"><span class="pre">FilterExpression.expression</span></code></a></li>
+<li><a class="reference internal" href="#obsbase.filters.FilterExpression.evaluate"><code class="docutils literal notranslate"><span class="pre">FilterExpression.evaluate()</span></code></a></li>
 </ul>
 </li>
 </ul>

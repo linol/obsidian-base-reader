@@ -5,6 +5,7 @@ docs/source/conf.py
 obsbase/__init__.py
 obsbase/base.py
 obsbase/file.py
+obsbase/filters.py
 obsbase/note.py
 obsbase/query.py
 obsbase/resultset.py
@@ -16,6 +17,7 @@ obsbase.egg-info/dependency_links.txt
 obsbase.egg-info/requires.txt
 obsbase.egg-info/top_level.txt
 tests/test_file.py
+tests/test_filters.py
 tests/test_note.py
 tests/test_resultset.py
 tests/test_view.py

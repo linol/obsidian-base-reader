@@ -1,0 +1,54 @@
+obsbase.filters
+===============
+
+.. py:module:: obsbase.filters
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   obsbase.filters.OPERATORS
+   obsbase.filters.STRING_METHODS
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   obsbase.filters.FilterExpression
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   obsbase.filters.parse_literal
+
+
+Module Contents
+---------------
+
+.. py:data:: OPERATORS
+
+.. py:data:: STRING_METHODS
+
+.. py:function:: parse_literal(value)
+
+.. py:class:: FilterExpression(expression)
+
+   .. py:attribute:: OP_RE
+
+
+   .. py:attribute:: METHOD_RE
+
+
+   .. py:attribute:: expression
+
+
+   .. py:method:: evaluate(note)
+
+

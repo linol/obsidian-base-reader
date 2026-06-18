@@ -12,6 +12,7 @@ Submodules
 
    /autoapi/obsbase/base/index
    /autoapi/obsbase/file/index
+   /autoapi/obsbase/filters/index
    /autoapi/obsbase/note/index
    /autoapi/obsbase/query/index
    /autoapi/obsbase/resultset/index
