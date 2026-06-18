@@ -1,0 +1,8 @@
+PyYAML
+pandas
+
+[docs]
+sphinx>=8.0
+myst-parser
+sphinx-autoapi
+furo
