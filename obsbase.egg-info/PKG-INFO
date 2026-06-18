@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: obsbase
-Version: 0.1.2
+Version: 0.1.3
 Summary: Read and query Obsidian Base (.base) files from Python
 Author: FEVRE Lionel
 License: MIT
